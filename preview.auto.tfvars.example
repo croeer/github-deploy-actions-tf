@@ -1,0 +1,22 @@
+# Example configuration for the optional preview/test deployment role.
+# Copy the relevant values into your actual tfvars/state configuration.
+
+enable_preview_deploy_role = true
+
+preview_github_subjects = [
+  # Allow any branch of this repository to deploy to preview targets.
+  "repo:croeer/homepage-astro:ref:refs/heads/*",
+
+  # Additional repositories can be added explicitly.
+  # "repo:croeer/another-static-site:ref:refs/heads/*",
+]
+
+preview_s3_bucket_names = [
+  "astro-hp-test-263750417245",
+  # "another-test-site-bucket",
+]
+
+preview_cloudfront_distribution_ids = [
+  "E2P600SH89C5IE",
+  # "E123456789EXAMPLE",
+]
